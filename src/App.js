@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { avatar } from "@ngneat/falso";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="ui container comments">
+      <div className="comment">
+        <a href="/" className="avatar">
+          <img alt="avatar" src={avatar()} />
         </a>
-      </header>
+        <div className="content">
+          <a href="/" className="author">
+            Matt
+          </a>
+          <div className="metadata">
+            <span className="date">Today at 5:42PM</span>
+          </div>
+          <div className="text">Nice blog post!</div>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
